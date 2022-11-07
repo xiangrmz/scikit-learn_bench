@@ -1,0 +1,32 @@
+{
+    "common": {
+        "lib": "sklearn",
+        "data-format": "pandas",
+        "data-order": "F",
+        "dtype": "float64",
+        "num-threads": -1,
+	"num-iterations": 2000,
+        "time-limit": 120
+    },
+    "cases": [
+        {
+            "device": "none",
+            "dataset": [
+                {
+                    "source": "synthetic",
+                    "type": "classification",
+                    "n_classes": 10,
+                    "n_features": 16,
+                    "training": {
+                        "n_samples": 16000000
+                    },
+                    "testing": {
+                        "n_samples": 16000000
+                    }
+                }
+            ],
+            "workload-size": "large",
+            "method": "kd_tree"
+        }
+    ]
+}

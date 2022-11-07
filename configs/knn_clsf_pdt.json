@@ -1,0 +1,34 @@
+{
+    "common": {
+        "lib": "sklearn",
+        "data-format": "numpy",
+        "data-order": "F",
+        "dtype": "float64",
+        "num-threads": -1,
+        "time-limit": 120
+    },
+    "cases": [
+        {
+            "algorithm": "knn_clsf",
+            "dtype": "float32",
+            "data-format": "numpy",
+            "data-order": "C",
+	    "num-threads": [5, -1],
+            "dataset": [
+                {
+                    "source": "synthetic",
+                    "type": "classification",
+                    "n_classes": 2,
+                    "n_features": 3,
+                    "training": {
+                        "n_samples": 100000
+                    },
+                    "testing": {
+                        "n_samples": 100000
+                    }
+                }
+            ],
+            "method": "kd_tree"
+        }
+    ]
+}
