@@ -6,7 +6,7 @@ patch_sklearn()
 from sklearn.neighbors import KNeighborsClassifier
 
 
-num_thread = 72
+num_thread = 112
 
 if len(sys.argv) == 2:
     num_thread = int(sys.argv[1])
@@ -22,8 +22,11 @@ def set_daal_num_threads(num_threads):
 train_file_x = "bigdata/synthetic-classification-10-X-train-250000x16_256_tile.npy"
 train_file_y = "bigdata/synthetic-classification-10-y-train-250000x16_256_tile.npy"
 
-train_file_x = "synthetic-classification-10-X-train-16000000x16.npy"
-train_file_y = "synthetic-classification-10-y-train-16000000x16.npy"
+train_file_x = "data/synthetic-classification-10-X-train-16000000x128.npy"
+train_file_y = "data/synthetic-classification-10-y-train-16000000x128.npy"
+
+# train_file_x = "data/synthetic-classification-10-X-train-16000000x16.npy"
+# train_file_y = "data/synthetic-classification-10-y-train-16000000x16.npy"
 
 # train_file_x = "bigdata/synthetic-classification-10-X-train-250000x16_8_tile.npy"
 # train_file_y = "bigdata/synthetic-classification-10-y-train-250000x16_8_tile.npy"
@@ -58,7 +61,7 @@ start = time.time()
 print("start")
 print(start)
 print("...")
-# X_train = np.asfortranarray(X_train, float)
+X_train = np.asfortranarray(X_train, float)
 knn_clsf.fit(X_train, y_train)
 
 print("duration")

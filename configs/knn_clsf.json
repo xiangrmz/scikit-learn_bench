@@ -5,18 +5,21 @@
         "data-order": "F",
         "dtype": "float64",
         "num-threads": -1,
-	"num-iterations": 2000,
+	"num-iterations": 2,
         "time-limit": 120
     },
     "cases": [
         {
-            "device": "none",
+            "algorithm": "knn_clsf",
+            "dtype": "float32",
+            "data-format": "numpy",
+            "data-order": "F",
             "dataset": [
                 {
                     "source": "synthetic",
                     "type": "classification",
                     "n_classes": 10,
-                    "n_features": 16,
+                    "n_features": 128,
                     "training": {
                         "n_samples": 16000000
                     },
@@ -25,7 +28,6 @@
                     }
                 }
             ],
-            "workload-size": "large",
             "method": "kd_tree"
         }
     ]
