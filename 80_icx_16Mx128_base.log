@@ -1,0 +1,8 @@
+start
+1667979485.3747482
+...
+duration
+25306301.11694336
+data/synthetic-classification-10-X
+16000000x128.npy
+KNeighborsClassifier(algorithm='kd_tree', metric='euclidean', n_neighbors=10)
