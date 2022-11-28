@@ -19,9 +19,21 @@
                     "source": "synthetic",
                     "type": "classification",
                     "n_classes": 10,
-                    "n_features": 128,
+                    "n_features": 16,
                     "training": {
                         "n_samples": 16000000
+                    },
+                    "testing": {
+                        "n_samples": 16000000
+                    }
+                },
+                {
+                    "source": "synthetic",
+                    "type": "classification",
+                    "n_classes": 10,
+                    "n_features": 16,
+                    "training": {
+                        "n_samples": 128000000
                     },
                     "testing": {
                         "n_samples": 16000000

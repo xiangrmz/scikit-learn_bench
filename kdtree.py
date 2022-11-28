@@ -28,8 +28,8 @@ train_file_y = "data/synthetic-classification-10-y-train-16000000x128.npy"
 # train_file_x = "data/synthetic-classification-10-X-train-16000000x16.npy"
 # train_file_y = "data/synthetic-classification-10-y-train-16000000x16.npy"
 
-# train_file_x = "bigdata/synthetic-classification-10-X-train-250000x16_8_tile.npy"
-# train_file_y = "bigdata/synthetic-classification-10-y-train-250000x16_8_tile.npy"
+# train_file_x = "data/synthetic-classification-10-X-train-128000000x16.npy"
+# train_file_y = "data/synthetic-classification-10-y-train-128000000x16.npy"
 
 # train_file_x = "bigdata/synthetic-classification-10-X-train-2000000x16_8_tile_col.npy"
 # train_file_y = "bigdata/synthetic-classification-10-y-train-2000000x16_8_tile_col.npy"
@@ -61,7 +61,7 @@ start = time.time()
 print("start")
 print(start)
 print("...")
-X_train = np.asfortranarray(X_train, float)
+# X_train = np.asfortranarray(X_train, float)
 knn_clsf.fit(X_train, y_train)
 
 print("duration")
