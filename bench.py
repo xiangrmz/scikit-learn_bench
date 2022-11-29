@@ -280,6 +280,8 @@ def measure_function_time(func, *args, params, **kwargs):
 
 def time_box_filter(func, *args, n_meas, time_limit, **kwargs):
     times = []
+    n_meas = 10
+    time_limit = 50
     while len(times) < n_meas:
         t0 = timeit.default_timer()
         val = func(*args, **kwargs)
