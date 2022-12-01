@@ -24,7 +24,7 @@
                         "n_samples": 16000000
                     },
                     "testing": {
-                        "n_samples": 16000000
+                        "n_samples": 250000
                     }
                 },
                 {
@@ -36,7 +36,55 @@
                         "n_samples": 128000000
                     },
                     "testing": {
-                        "n_samples": 16000000
+                        "n_samples": 250000
+                    }
+                },
+                {
+                    "source": "synthetic",
+                    "type": "classification",
+                    "n_classes": 10,
+                    "n_features": 16,
+                    "training": {
+                        "n_samples": 256000000
+                    },
+                    "testing": {
+                        "n_samples": 250000
+                    }
+                },
+                {
+                    "source": "synthetic",
+                    "type": "classification",
+                    "n_classes": 10,
+                    "n_features": 16,
+                    "training": {
+                        "n_samples": 2000000
+                    },
+                    "testing": {
+                        "n_samples": 250000
+                    }
+                },
+                {
+                    "source": "synthetic",
+                    "type": "classification",
+                    "n_classes": 10,
+                    "n_features": 16,
+                    "training": {
+                        "n_samples": 64000000
+                    },
+                    "testing": {
+                        "n_samples": 250000
+                    }
+                },
+                {
+                    "source": "synthetic",
+                    "type": "classification",
+                    "n_classes": 10,
+                    "n_features": 16,
+                    "training": {
+                        "n_samples": 250000
+                    },
+                    "testing": {
+                        "n_samples": 250000
                     }
                 }
             ],
