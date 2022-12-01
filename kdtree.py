@@ -20,38 +20,38 @@ def set_daal_num_threads(num_threads):
     except ImportError:
         raise('@ Package "daal4py" was not found. Number of threads '
                      'is being ignored')
-train_file_x = "synthetic-classification-10-X-train-250000x16"
-train_file_y = "synthetic-classification-10-y-train-250000x16"
+train_file_x = "synthetic-classification-10-X-train-250000x16.npy"
+train_file_y = "synthetic-classification-10-y-train-250000x16.npy"
 
-train_file_x = "synthetic-classification-10-X-train-2000000x16.npy"
-train_file_y = "synthetic-classification-10-y-train-2000000x16.npy"
+# train_file_x = "synthetic-classification-10-X-train-2000000x16.npy"
+# train_file_y = "synthetic-classification-10-y-train-2000000x16.npy"
 
-train_file_x = "synthetic-classification-10-X-train-16000000x16.npy"
-train_file_y = "synthetic-classification-10-y-train-16000000x16.npy"
+# train_file_x = "synthetic-classification-10-X-train-16000000x16.npy"
+# train_file_y = "synthetic-classification-10-y-train-16000000x16.npy"
 
-train_file_x = "synthetic-classification-10-X-train-64000000x16.npy"
-train_file_y = "synthetic-classification-10-y-train-64000000x16.npy"
+# train_file_x = "synthetic-classification-10-X-train-64000000x16.npy"
+# train_file_y = "synthetic-classification-10-y-train-64000000x16.npy"
 
-train_file_x = "synthetic-classification-10-X-train-128000000x16.npy"
-train_file_y = "synthetic-classification-10-y-train-128000000x16.npy"
+# train_file_x = "synthetic-classification-10-X-train-128000000x16.npy"
+# train_file_y = "synthetic-classification-10-y-train-128000000x16.npy"
 
-train_file_x = "synthetic-classification-10-X-train-256000000x16.npy"
-train_file_y = "synthetic-classification-10-y-train-256000000x16.npy"
+# train_file_x = "synthetic-classification-10-X-train-256000000x16.npy"
+# train_file_y = "synthetic-classification-10-y-train-256000000x16.npy"
 
-train_file_x = "synthetic-classification-2-X-train-100000x3.npy"
-train_file_y = "synthetic-classification-2-y-train-100000x3.npy"
+# train_file_x = "synthetic-classification-2-X-train-100000x3.npy"
+# train_file_y = "synthetic-classification-2-y-train-100000x3.npy"
 
-train_file_x = "synthetic-classification-2-X-train-2000000x3.npy"
-train_file_y = "synthetic-classification-2-y-train-2000000x3.npy"
+# train_file_x = "synthetic-classification-2-X-train-2000000x3.npy"
+# train_file_y = "synthetic-classification-2-y-train-2000000x3.npy"
 
-train_file_x = "synthetic-classification-2-X-train-16000000x3.npy"
-train_file_y = "synthetic-classification-2-y-train-16000000x3.npy"
+# train_file_x = "synthetic-classification-2-X-train-16000000x3.npy"
+# train_file_y = "synthetic-classification-2-y-train-16000000x3.npy"
 
-train_file_x = "synthetic-classification-2-X-train-64000000x3.npy"
-train_file_y = "synthetic-classification-2-y-train-64000000x3.npy"
+# train_file_x = "synthetic-classification-2-X-train-64000000x3.npy"
+# train_file_y = "synthetic-classification-2-y-train-64000000x3.npy"
 
-train_file_x = "synthetic-classification-2-X-train-128000000x3.npy"
-train_file_y = "synthetic-classification-2-y-train-128000000x3.npy"
+# train_file_x = "synthetic-classification-2-X-train-128000000x3.npy"
+# train_file_y = "synthetic-classification-2-y-train-128000000x3.npy"
 
 data_floder = "data/"
 
@@ -88,14 +88,17 @@ print("...")
 knn_clsf.fit(X_train, y_train)
 
 print("duration")
-print((time.time() - start)*1000000)
+print(int((time.time() - start)*1000000))
 names = train_file_x.partition("-train-")
 print(names[0])
 print(names[-1])
 # print(knn_clsf.predict(X_train),'\n', y_train)
-print("accuracy")
+start = time.time()
 y_pred = knn_clsf.predict(X_test)
+print("predict duration")
+print(int((time.time() - start)*1000000))
+print("accuracy")
 print((y_test == y_pred).sum()/250000)
 
-print(y_test)
-print(y_pred)
+# print(y_test)
+# print(y_pred)
